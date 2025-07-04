@@ -1,0 +1,16 @@
+groq
+sentence-transformers
+numpy
+faiss-cpu  # or use faiss-gpu if using GPU
+python-dotenv
+langgraph
+edge-tts
+pygame
+PyPDF2
+pydub
+noisereduce
+keyboard
+sounddevice
+fastapi
+aiofiles
+uvicorn

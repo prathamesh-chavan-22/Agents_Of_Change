@@ -1,0 +1,39 @@
+# ========================
+# Python (Backend/)
+# ========================
+Backend/__pycache__/
+Backend/*.py[cod]
+Backend/*.egg-info/
+Backend/.venv/
+Backend/.env
+Backend/.mypy_cache/
+Backend/.pytest_cache/
+Backend/build/
+Backend/dist/
+Backend/venv/
+
+# ========================
+# Node.js / React (Frontend/)
+# ========================
+Frontend/node_modules/
+Frontend/.env
+Frontend/dist/
+Frontend/.parcel-cache/
+Frontend/.next/
+Frontend/build/
+
+# ========================
+# Common
+# ========================
+.vscode/
+*.log
+*.swp
+.DS_Store
+Thumbs.db
+
+# ========================
+# Optional (Lock Files)
+# ========================
+# Uncomment to ignore if not needed
+# Frontend/package-lock.json
+# Frontend/yarn.lock
