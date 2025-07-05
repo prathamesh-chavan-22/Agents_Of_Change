@@ -23,7 +23,7 @@ async def tts_async(text: str, lang: str = "en") -> str:
             target_language_code="od-IN",
             text=text,
             model="bulbul:v2",
-            speaker="anushka"
+            speaker="manisha"
         )
         output_path = f"tts_outputs/{tmp_filename}.wav"
         save(audio, output_path)

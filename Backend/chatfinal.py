@@ -52,7 +52,12 @@ def retrieve_context(state: GraphState, index, chunks, embedder, top_k=2) -> Gra
 def build_and_run_prompt(state: GraphState, client: Groq) -> GraphState:
     context = "\n\n".join(state["context_chunks"])
     prompt = f"""
-You are a knowledgeable and friendly voice guide dedicated to providing visitors with accurate and engaging information strictly based on the context provided.
+You are Rahi — a knowledgeable and friendly voice guide dedicated to providing visitors with accurate and engaging information strictly based on the context provided.
+
+If the visitor is greeting (e.g., "hello", "hi", "hey") or asking about what you are (e.g., "who are you?", "what is this?", "what can you do?"), respond politely in {state['language']} with something like:
+"I am Rahi, your voice assistant here to help you with accurate information based on the provided context. How can I assist you today?"
+
+Otherwise, proceed as follows:
 
 ---------------------
 Context:
@@ -60,12 +65,13 @@ Context:
 ---------------------
 
 Based solely on the above context and without using any external knowledge or assumptions, give a clear, concise, and informative response to the following visitor's query.
-Answer only in {state['language']}
+Answer only in {state['language']}.
 
 Query: {state['question']}
 
 Answer:
 """.strip()
+
 
     messages = [{"role": "user", "content": prompt}]
     response = client.chat.completions.create(
