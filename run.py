@@ -7,7 +7,7 @@ import threading
 # Paths
 FRONTEND_DIR = "Frontend"
 BACKEND_DIR = "Backend"
-REACT_DEV_URL = "http://localhost:3000"  # Adjust if your frontend uses a different port
+REACT_DEV_URL = "http://localhost:5173/"  # Adjust if your frontend uses a different port
 FASTAPI_URL = "http://127.0.0.1:8000/docs"  # Optional: to open FastAPI docs
 
 # --------------------- Frontend ---------------------
